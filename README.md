@@ -1,22 +1,23 @@
 # BSR-CLIP
 
-PyTorch implementation of **BSR-CLIP: Background-Calibrated Structural Reasoning for
+PyTorch implementation of **BSR-CLIP: Background-Calibrated Structural Reasoning for  
 Zero-Shot Visual-Language Anomaly Detection**.
 
 <p align="center">
-  <img src="./pic/model.png" alt="LOGIC-AD Framework" width="70%">
+  <img src="./pic/model.png" alt="BSR-CLIP Framework" width="70%">
   <br>
-  <em>Overview of LOGIC-AD. zero-shot anomaly segmentation results are shown for cross-domain evaluation.</em>
+  <em>Overview of BSR-CLIP. Zero-shot anomaly segmentation results are shown for cross-domain evaluation.</em>
 </p>
 
 ---
 
 ## 📌 Overview
 
-LOGIC-AD is a **cross-domain zero-shot anomaly detection** framework that enforces **logit-space consistency** to improve generalization across unseen domains.  
-This repository provides a complete PyTorch training and evaluation pipeline for reproducing the results in the paper.
+**BSR-CLIP** is a **cross-domain zero-shot visual-language anomaly detection** framework that improves anomaly detection robustness by jointly modeling **background-calibrated anomaly reliability** and **structure-aware spatial reasoning**.  
+By leveraging pretrained CLIP representations, BSR-CLIP performs anomaly localization and detection without any target-domain training data.
 
----
+This repository provides a complete PyTorch pipeline for training, evaluation, and ablation studies, enabling reproducible research and cross-domain benchmarking.
+
 
 ## 📂 Dataset Preparation
 
@@ -46,13 +47,6 @@ data_dir/
 ├── CVC-ColonDB
 │   ├── images
 │   └── masks
-├── DAGM_KaggleUpload
-│   ├── Class1
-│   │   ├── Test
-│   │   │   └── Label
-│   │   └── Train
-│   │       └── Label
-│   ├── ...
 ├── MPDD
 │   ├── blacket_black
 │   │   ├── ground_truth
@@ -71,14 +65,13 @@ data_dir/
 ├── Kvasir
 │   ├── images
 │   └── masks
-├── mvtec_3d  
-│   ├── bagel
-│   │   ├── calibration
+├── mvtec 
+│   ├── bottle
+│   │   ├── ground_truth
 │   │   ├── test
-│   │   │   ├── combined
+│   │   │   ├── broken_large
+│   │   │   ├── broken_small
 │   │   │   ├── contamination
-│   │   │   ├── crack
-│   │   │   ├── hole
 │   │   │   └── good
 │   │   └── train
 │   │       └── good
