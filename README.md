@@ -4,7 +4,7 @@ PyTorch implementation of **BSR-CLIP: Background-Calibrated Structural Reasoning
 Zero-Shot Visual-Language Anomaly Detection**.
 
 <p align="center">
-  <img src="./pic/model.png" alt="BSR-CLIP Framework" width="70%">
+  <img src="./pic/ICMR-picture.pdf" alt="BSR-CLIP Framework" width="70%">
   <br>
   <em>Overview of BSR-CLIP. Zero-shot anomaly segmentation results are shown for cross-domain evaluation.</em>
 </p>
